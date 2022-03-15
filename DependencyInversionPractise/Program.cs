@@ -1,11 +1,10 @@
-﻿using System;
-using SequenceGenerator;
+﻿using SequenceGenerator.Interfaces;
 
 namespace DependencyInversionPractise
 {
     public class Program {
         public static void Main(string[] args) {
-            var sequenceGenerator = new SequenceGenerator.SequenceGenerator();
+            ISequenceGenerator sequenceGenerator = new SequenceGenerator.SequenceGenerator();
 
             sequenceGenerator.AddRule("FizzBuzz", x => x % 3 == 0 && x % 5 == 0);
             sequenceGenerator.AddRule("Fizz", x => x % 3 == 0);
